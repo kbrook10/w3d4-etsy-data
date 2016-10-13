@@ -151,6 +151,8 @@ var total = prices.reduce(function(previous, current){
 }, {price: 0})
 var avgPrice = total.price / prices.length
 
+console.log(total)
+
 // console.log(avgPrice)
 
 //End of lesson
