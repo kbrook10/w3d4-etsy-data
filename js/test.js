@@ -1,1 +1,1 @@
-var prices = [{pr: 10.43443}, {pr: 15.432432}, {pr: 11.432432}, {pr: 20.432432}]
+var prices = [{pr: 10, title: 'Jack'}, {pr: 15, title: 'Jane'}, {pr: 11, title:'John' }, {pr: 20, title: 'Joe'}]

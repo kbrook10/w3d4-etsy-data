@@ -74,16 +74,16 @@ var matches = inbox.find(function(item){ //<--This finds the first match in an a
     return item.includes('Job')
 })
 
-function checkForJob(item){ //<--This is a functional interators
-        return item.includes('Job')
-    }
-var matches = inbox.filter(checkForJob)
-
-// var matches = inbox.filter(function(item){ //<--This provides an array of all the matches because of 'filter' (preferred choice to use)
+// function checkForJob(item){ //<--This is a functional interators
 //         return item.includes('Job')
-// })
+//     }
+// var matches = inbox.filter(checkForJob)
 
-// console.log(matches)
+var matches = inbox.filter(function(item){ //<--This provides an array of all the matches because of 'filter' (preferred choice to use)
+        return item.includes('Job')
+})
+
+console.log(matches)
 
 //This writes out all of the items in the array
 //<------------------------->
@@ -151,7 +151,7 @@ var total = prices.reduce(function(previous, current){
 }, {price: 0})
 var avgPrice = total.price / prices.length
 
-console.log(total)
+// console.log(total)
 
 // console.log(avgPrice)
 
