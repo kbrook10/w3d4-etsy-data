@@ -1,0 +1,24 @@
+{
+  "name": "w3d4-etsy-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbrook10/w3d4-etsy-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbrook10/w3d4-etsy-data/issues"
+  },
+  "homepage": "https://github.com/kbrook10/w3d4-etsy-data#readme",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "moment": "^2.15.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

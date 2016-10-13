@@ -1,3 +1,4 @@
+// var accounting = require('accounting')
 //Test to see what the data looks like in Browser
 // console.log(items) <-- displays in the Browser console with drop downs for each object in the array
 //<----------------------------->
@@ -89,7 +90,7 @@ console.log('Items that cost between $14.00 USD and $18.00 USD: ', matches)
 /*a) What am i doing?
 (1) Search array
 (2) ID a property with the value of GBP
-(3) Use that index array object index to capture the name and price
+(3) Use the object that is retrieved to return the name and price properties
 (4)Write out the finding
 b) How am i doing it?
 ~need to filter array and search for GBP value in property
@@ -101,22 +102,46 @@ c) Why am i doing it this way
 var matchGBP = items.filter(function(item){
     return item.currency_code === 'GBP'
 })
-//(3)
-console.log(matchGBP[0].title + &#163 + matchGBP[0].price)
-
+//(3 - 4)
+console.log(matchGBP[0].title + accounting.formatMoney(matchGBP[0].price, " £", 0))
 
 
 //End of Problem
 //<-------------------------------->
 
-//(4)Question:
+//(4)Question: Show me how to find which items are made of wood. Please console.log the ones you find.
 //(4)Solution:
+/*SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3 is made of wood.
+Bottle cap catcher personalized. Man cave gift for him- Wooden Beer pub sign - Groomsmen wedding Gift is made of wood.
+Medium Size, Welcome To Our Firepit-Where Friends And Marshmallows Get Toasted At The Same Time-Painted Wood Sign-Custom Colors is made of wood.
+Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
+Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
+*/
 
 //Questions:
 /*a) What am i doing?
+(1)Search array objects that review materials
+(2)Search the material property for the word wood and return all objects with...
+(3)Loop through the objects to obtain the titles
+(4)Place titles on new line
+(5)Write the result to the console.log
+(*)
 b) How am i doing it?
+~return filtered array of items that match condition
+
 c) Why am i doing it this way
 */
+//steps (1 - 2)
+var woodMade = items.filter(function(item){
+    return item.materials.includes('wood')
+})
+//steps (3)
+var woodTitle = woodMade.map(function(item){
+    return item.title
+})
+//steps (4 - 5)
+console.log(woodTitle.join('\n'))
+
 
 //End of Problem
 //<-------------------------------->
