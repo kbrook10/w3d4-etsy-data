@@ -188,9 +188,11 @@ personalized harry potter glass
 b) How am i doing it?
 c) Why am i doing it this way
 */
+//Steps (1 - 3)
 var eightMore = items.filter(function(item){
     return item.materials.length > 8
 })
+//Steps (4 - 5)
 var eightMoreTitles = eightMore.map(function(item){
     console.log(item.title + ' has ' + item.materials.length + ' materials: \n ' + item.materials.join(' \n '))
 })
@@ -201,14 +203,25 @@ var eightMoreTitles = eightMore.map(function(item){
 //<-------------------------------->
 
 
-//(6)Question:
-//(6)Solution:
+//(6)Question: Show me how to calculate how many items were made by their sellers
+//(6)Solution: 18 were made by their sellers
 
 //Questions:
 /*a) What am i doing?
+() Search through the array objects to find the property 'who_made' is equal to 'i_did'
+() Count up the total amount of objects that have the property: who_made and value: i_did
+() Take that length and concatenate it with 'were made by their sellers'
+()
+()
 b) How am i doing it?
 c) Why am i doing it this way
 */
+
+var selfMade = items.filter(function(item){
+    return item.who_made === 'i_did'
+})
+
+console.log(selfMade.length + ' were made by their sellers')
 
 //End of Problem
 //<-------------------------------->
