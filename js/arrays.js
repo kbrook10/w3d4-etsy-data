@@ -42,10 +42,10 @@ inbox.splice(1,0, 'You are Hired', 'Job Offer') //<--Go into array and splice th
 // console.log(inbox)
 
 //Count things in the array list
-//<-------------------------->
-inbox[inbox.length]= 'Invite To Spotify'
-// console.log(inbox.length)
-// console.log(inbox)
+// //<-------------------------->
+// inbox[inbox.length]= 'Invite To Spotify'
+console.log(inbox.length)
+console.log(inbox)
 
 //Find things in array
 //<------------------------->
@@ -83,19 +83,19 @@ var matches = inbox.filter(function(item){ //<--This provides an array of all th
         return item.includes('Job')
 })
 
-console.log(matches)
+// console.log(matches)
 
 //This writes out all of the items in the array
 //<------------------------->
 
-var matches = [] //<-- This creates list for matches
-for ( var i = 0; i < inbox.length; i++){ //<--This is an anonymous function
-    // console.log(i+ '. ' + inbox[i])
-    var hasJob = checkForJob(inbox[i])
-    if (hasJob){
-        matches.push(inbox[i])
-    }
-}
+// var matches = [] //<-- This creates list for matches
+// for ( var i = 0; i < inbox.length; i++){ //<--This is an anonymous function
+//     // console.log(i+ '. ' + inbox[i])
+//     var hasJob = checkForJob(inbox[i])
+//     if (hasJob){
+//         matches.push(inbox[i])
+//     }
+// }
 // console.log(matches)
 
 //Maps Reduce and Sorting section

@@ -146,14 +146,56 @@ console.log(woodTitle.join('\n'))
 //End of Problem
 //<-------------------------------->
 
-//(5)Question:
+//(5)Question: Show me how to find which items are made of eight or more materials. Please console.log the ones you find.
 //(5)Solution:
+/*
+Qty of 2 Groomsmen Gift - Stainless Steel Personalized Bottle Opener - NO Capcatcher has 9 materials:
+wall mount bottle opener
+wedding
+man cave
+christmas gift
+guy gift
+fathers day
+home bar
+beer
+bar
+
+The Three Broomsticks Customizable Beer Stein Mug, Harry Potter  Inspired, hogsmeade village, harry potter gift, three broomsticks mug  has 13 materials:
+
+glass
+sandblast cabinet
+vinyl
+beer glass
+pint glass
+etched pint glass
+etched glass
+etched beer glass
+16 oz pint
+beer gift
+etched harry potter glass
+the three broomsticks glass
+personalized harry potter glass
+*/
+
 
 //Questions:
 /*a) What am i doing?
+(1)Search within the array objects for the object property material
+(2)Count the length of the array elements withint the object property material
+(3)Obtain the objects that have an object property material length greater than (8) eight
+(4) Return the title property of the objects, the count of materials, and the list of materials.
+(5) Concatenate to Add the title, then ' has ', then the length of materials, then ' materials:' and finally the list of materials
 b) How am i doing it?
 c) Why am i doing it this way
 */
+var eightMore = items.filter(function(item){
+    return item.materials.length > 8
+})
+var eightMoreTitles = eightMore.map(function(item){
+    console.log(item.title + ' has ' + item.materials.length + ' materials: \n ' + item.materials.join(' \n '))
+})
+// console.log(eightMoreTitles)
+
 
 //End of Problem
 //<-------------------------------->
