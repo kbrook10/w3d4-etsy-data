@@ -103,7 +103,7 @@ var matchGBP = items.filter(function(item){
     return item.currency_code === 'GBP'
 })
 //(3 - 4)
-console.log(matchGBP[0].title + accounting.formatMoney(matchGBP[0].price, " £", 0))
+console.log(matchGBP[0].title + ' costs ' + accounting.formatMoney(matchGBP[0].price, " £", 0))
 
 
 //End of Problem
@@ -194,9 +194,10 @@ var eightMore = items.filter(function(item){
 })
 //Steps (4 - 5)
 var eightMoreTitles = eightMore.map(function(item){
-    console.log(item.title + ' has ' + item.materials.length + ' materials: \n ' + item.materials.join(' \n '))
+    // console.log(item.title + ' has ' + item.materials.length + ' materials: \n ' + item.materials.join(' \n '))
+    return '\n' + item.title + ' has ' + item.materials.length + ' materials: \n\n ' + item.materials.join(' \n ')
 })
-// console.log(eightMoreTitles)
+console.log(eightMoreTitles.join('\n'))
 
 
 //End of Problem
@@ -208,19 +209,18 @@ var eightMoreTitles = eightMore.map(function(item){
 
 //Questions:
 /*a) What am i doing?
-() Search through the array objects to find the property 'who_made' is equal to 'i_did'
-() Count up the total amount of objects that have the property: who_made and value: i_did
-() Take that length and concatenate it with 'were made by their sellers'
-()
-()
+(1) Search through the array objects to find the property 'who_made' is equal to 'i_did'
+(2) Count up the total amount of objects that have the property: who_made and value: i_did
+(3) Take that length and concatenate it with 'were made by their sellers'
 b) How am i doing it?
 c) Why am i doing it this way
 */
 
+//steps (1 - 2)
 var selfMade = items.filter(function(item){
     return item.who_made === 'i_did'
 })
-
+//steps(3)
 console.log(selfMade.length + ' were made by their sellers')
 
 //End of Problem
